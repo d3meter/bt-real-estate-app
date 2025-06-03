@@ -44,20 +44,29 @@ The goal is to deepen my understanding of Django by integrating it step-by-step 
    ```
 
 4. Set up the database:
-   - Ensure PostgreSQL is installed and running.
-   - Create a database and update the `DATABASES` setting in `settings.py`.
+   - Make sure **PostgreSQL** is installed and running locally.
+   - Create a new database for the project.
+   - In the project root directory, create a `.env` file with the following variables:
+      ```env
+      DB_HOST=your_database_host
+      DB_NAME=your_database_name
+      DB_USER=your_database_user
+      DB_PASS=your_database_password
+      DB_HOST=your_database_host
+      DB_PORT=your_database_port
+      ```
 
-5. Run migrations:
+6. Run migrations:
    ```bash
    python manage.py migrate
    ```
 
-6. Start the development server:
+7. Start the development server:
    ```bash
    python manage.py runserver
    ```
 
-7. Access the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+8. Access the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Admin Interface
 
