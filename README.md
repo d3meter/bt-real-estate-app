@@ -49,11 +49,10 @@ The goal is to deepen my understanding of Django by integrating it step-by-step 
    - In the project root directory, create a `.env` file with the following variables:
       ```env
       DB_HOST=your_database_host
+      DB_PORT=your_database_port
       DB_NAME=your_database_name
       DB_USER=your_database_user
       DB_PASS=your_database_password
-      DB_HOST=your_database_host
-      DB_PORT=your_database_port
       ```
 
 6. Run migrations:
