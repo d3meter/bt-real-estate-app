@@ -13,6 +13,7 @@ The goal is to deepen my understanding of Django by integrating it step-by-step 
 - 🛠️ Based on a pre-designed **static HTML template** turned into a Django project.
 - 🐍 Built with **Django** (Python web framework).
 - 🗄️ Uses **PostgreSQL** as the database backend.
+- 📧 Automated email notifications for new inquiries via Gmail SMTP.
 - ⚙️ Includes a **custom-styled Django Admin** that visually aligns with the main site's theme.
 - 🧱 Work in progress: additional features, models, and admin enhancements are continuously being added.
 
@@ -54,6 +55,20 @@ The goal is to deepen my understanding of Django by integrating it step-by-step 
       DB_USER=your_database_user
       DB_PASS=your_database_password
       ```
+
+5. Setting Up Email Notifications
+To send email notifications, you need to configure SMTP settings. If you're using a Gmail account, follow these steps to generate an App Password instead of using your actual Gmail password:
+- Go to [Google's App Passwords page](https://myaccount.google.com/apppasswords).
+- Sign in to your Google account if prompted.
+- Select Mail as the app and Other (Custom name) as the device.
+- Click Generate, and Google will provide a unique 16-character password.
+- Use this password as the EMAIL_HOST_PASSWORD in your .env file instead of your actual Gmail password:
+   ```env
+   EMAIL_HOST_USER=your_gmail_address
+   EMAIL_HOST_PASSWORD=your_app_specific_password
+   ```
+
+⚠️ Important: Never commit your .env file to version control (like GitHub). Always use .gitignore to exclude sensitive configurations
 
 6. Run migrations:
    ```bash
